@@ -10,8 +10,8 @@ var args= {
 	headers: {"CK":"PK0H4X3ZSPWG0SS9XW"}
 };
 
-// direct way 
-client.get("http://iot.cht.com.tw/iot/v1/device/${deviceId}/sensor/${sensorId}/rawdata", args, function (data, response) {
+// direct way  (http://, https://)
+client.get("https://iot.cht.com.tw/iot/v1/device/${deviceId}/sensor/${sensorId}/rawdata", args, function (data, response) {
     // parsed response body as js object 
     console.log(data);
     // raw response 
@@ -22,7 +22,7 @@ client.get("http://iot.cht.com.tw/iot/v1/device/${deviceId}/sensor/${sensorId}/r
  
 
 // registering remote methods 
-client.registerMethod("jsonMethod", "http://iot.cht.com.tw/iot/v1/device/${deviceId}/sensor/${sensorId}/rawdata", "GET");
+client.registerMethod("jsonMethod", "https://iot.cht.com.tw/iot/v1/device/${deviceId}/sensor/${sensorId}/rawdata", "GET");
  
 client.methods.jsonMethod(args, function (data, response) {
     // parsed response body as js object 

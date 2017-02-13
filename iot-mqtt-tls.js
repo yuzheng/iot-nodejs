@@ -2,11 +2,12 @@ var mqtt = require('mqtt');
 
 var args= {
 	username: "PK0H4X3ZSPWG0SS9XW",
-	password: "PK0H4X3ZSPWG0SS9XW"
+	password: "PK0H4X3ZSPWG0SS9XW",
+	rejectUnauthorized: false
 };
 
-//var client  = mqtt.connect('tcp://iot.cht.com.tw:1883',args);
-var client  = mqtt.connect('mqtt://iot.cht.com.tw',args);
+//var client  = mqtt.connect('mqtts://iot.cht.com.tw',args);
+var client  = mqtt.connect('tls://iot.cht.com.tw:8883',args);
 
 var topic = "/v1/device/281932011/sensor/temperature/rawdata";
  
