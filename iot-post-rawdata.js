@@ -22,7 +22,7 @@ var args= {
 };
 
 // direct way 
-client.post("http://iot.cht.com.tw/iot/v1/device/${deviceId}/rawdata", args, function (data, response) {
+client.post("https://iot.cht.com.tw/iot/v1/device/${deviceId}/rawdata", args, function (data, response) {
     // parsed response body as js object 
     //console.log(data);
     // raw response 
@@ -33,7 +33,7 @@ client.post("http://iot.cht.com.tw/iot/v1/device/${deviceId}/rawdata", args, fun
  
 
 // registering remote methods 
-client.registerMethod("postMethod", "http://iot.cht.com.tw/iot/v1/device/${deviceId}/rawdata", "GET");
+client.registerMethod("postMethod", "https://iot.cht.com.tw/iot/v1/device/${deviceId}/rawdata", "GET");
  
 client.methods.postMethod(args, function (data, response) {
     // parsed response body as js object 
