@@ -1,6 +1,6 @@
 # iot-nodejs
 
-> 提供 CHT IoT 平台 RESTful 與 MQTT 範例程式
+> 提供 IoT 平台 RESTful 與 MQTT 範例程式
 
 ## Setup
 
@@ -27,6 +27,3 @@ https://www.npmjs.com/package/mqtt
 提供範例：
 - iot-mqtt.js (訂閱設備感測數據異動)
 - iot-mqtt-publish.js (新增設備感測數據)
-
-協定參考：
-https://iot.cht.com.tw/iot/doc/api
